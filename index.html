@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Analyzer</h1>
+        <button id="themeToggle" class="theme-toggle">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-text">Dark Mode</span>
+        </button>
+    </header>
+    <div class="container">
+        <p>Upload your resume and get instant feedback</p>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-box" id="dropZone">
+                    <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                    <p>Drag & Drop your resume here</p>
+                    <p>or</p>
+                    <input type="file" id="fileInput" accept=".pdf,.doc,.docx" hidden>
+                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                        Choose File
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisSection" style="display: none;">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing your resume...</p>
+                </div>
+
+                <div class="results" id="results">
+                    <div class="score-card">
+                        <h2>Overall Score</h2>
+                        <div class="score" id="overallScore">0</div>
+                    </div>
+
+                    <div class="analysis-details">
+                        <div class="section">
+                            <h3>Key Strengths</h3>
+                            <ul id="strengths"></ul>
+                        </div>
+                        <div class="section">
+                            <h3>Areas for Improvement</h3>
+                            <ul id="improvements"></ul>
+                        </div>
+                        <div class="section">
+                            <h3>Skills Highlight</h3>
+                            <div class="skills-grid" id="skills"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
