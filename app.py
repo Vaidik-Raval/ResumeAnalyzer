@@ -15,7 +15,7 @@ import HF_API_KEY #from .env
 from huggingface_hub import InferenceClient
 import os
 hf_token = os.getenv('HF_TOKEN')
-# hello test    
+# hello test     
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
